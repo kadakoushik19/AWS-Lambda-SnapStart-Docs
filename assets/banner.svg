@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="340" viewBox="0 0 1280 340" role="img" aria-label="AWS Lambda SnapStart: Java 21 cold start demonstration">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0038A8"/>
+      <stop offset="1" stop-color="#002270"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="340" rx="18" fill="url(#bg)"/>
+  <g opacity="0.10" fill="none" stroke="#ffffff" stroke-width="2">
+    <path d="M880 340 C 960 220, 900 120, 1010 0"/>
+    <path d="M940 340 C 1020 220, 960 120, 1070 0"/>
+    <path d="M1000 340 C 1080 220, 1020 120, 1130 0"/>
+    <path d="M1060 340 C 1140 220, 1080 120, 1190 0"/>
+    <path d="M1120 340 C 1200 220, 1140 120, 1250 0"/>
+  </g>
+  <g fill="#ffffff">
+    <circle cx="1204" cy="58" r="22"/>
+    <path d="M1177 36 A 22 22 0 0 0 1177 80 Z"/>
+  </g>
+  <g font-family="'Segoe UI', Helvetica, Arial, sans-serif" fill="#ffffff">
+    <text x="56" y="70" font-size="20" letter-spacing="3" opacity="0.8">JAVA 21 · AWS LAMBDA · CLOUDWATCH</text>
+    <text x="56" y="140" font-size="58" font-weight="600">Reducing Java Cold Starts</text>
+    <text x="56" y="206" font-size="58" font-weight="600">with AWS Lambda SnapStart</text>
+    <text x="56" y="252" font-size="22" opacity="0.85">Restore a pre-initialized snapshot instead of starting Java from scratch</text>
+  </g>
+  <g font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="19" font-weight="600">
+    <rect x="56" y="278" width="252" height="40" rx="20" fill="#FF8A3D"/>
+    <text x="182" y="304" text-anchor="middle" fill="#ffffff">Init  3347.04 ms</text>
+    <text x="332" y="304" text-anchor="middle" fill="#ffffff">→</text>
+    <rect x="356" y="278" width="268" height="40" rx="20" fill="#2EC46B"/>
+    <text x="490" y="304" text-anchor="middle" fill="#ffffff">Restore  549.09 ms</text>
+    <rect x="648" y="278" width="232" height="40" rx="20" fill="none" stroke="#ffffff" stroke-width="2"/>
+    <text x="764" y="304" text-anchor="middle" fill="#ffffff">83.6% faster startup</text>
+  </g>
+</svg>

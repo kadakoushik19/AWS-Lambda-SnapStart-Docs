@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-label="Total project architecture: build and publish, cold start without SnapStart, cold start with SnapStart, CloudWatch">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#fff"/></marker><marker id="ahg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2EC46B"/></marker></defs>
+<g font-family="'Segoe UI', Helvetica, Arial, sans-serif">
+<rect width="1280" height="720" rx="18" fill="#0038A8"/>
+<text x="40" y="58" font-size="30" font-weight="600" fill="#fff">Total Project Architecture</text>
+<g fill="#fff"><circle cx="1214" cy="48" r="20"/><path d="M1190 28 A 20 20 0 0 0 1190 68 Z"/></g>
+<rect x="30" y="92" width="1045" height="176" rx="14" fill="#144CC0"/>
+<text x="46" y="164" font-size="14" font-weight="700" fill="#fff">WITHOUT</text><text x="46" y="183" font-size="14" font-weight="700" fill="#fff">SNAPSTART</text><text x="46" y="204" font-size="12.5" fill="#C9D8FF">every cold start</text>
+<rect x="175" y="132.0" width="158" height="96" rx="10" fill="#fff" stroke="none" stroke-width="2.5" stroke-dasharray=""/>
+<text x="254.0" y="163.0" font-size="15" font-weight="700" fill="#002A80" text-anchor="middle">Client request</text>
+<text x="254.0" y="183.0" font-size="12.5" fill="#002A80" text-anchor="middle">Console test event</text>
+<text x="254.0" y="203.0" font-size="12.5" fill="#002A80" text-anchor="middle">on $LATEST</text>
+<line x1="336" y1="180.0" x2="351" y2="180.0" stroke="#fff" stroke-width="2.5" stroke-dasharray="" marker-end="url(#ah)"/>
+<rect x="355" y="132.0" width="158" height="96" rx="10" fill="#fff" stroke="none" stroke-width="2.5" stroke-dasharray=""/>
+<text x="434.0" y="173.0" font-size="15" font-weight="700" fill="#002A80" text-anchor="middle">Lambda service</text>
+<text x="434.0" y="193.0" font-size="12.5" fill="#002A80" text-anchor="middle">No warm environment</text>
+<line x1="516" y1="180.0" x2="531" y2="180.0" stroke="#fff" stroke-width="2.5" stroke-dasharray="" marker-end="url(#ah)"/>
+<rect x="535" y="132.0" width="158" height="96" rx="10" fill="#fff" stroke="none" stroke-width="2.5" stroke-dasharray=""/>
+<text x="614.0" y="173.0" font-size="15" font-weight="700" fill="#002A80" text-anchor="middle">New environment</text>
+<text x="614.0" y="193.0" font-size="12.5" fill="#002A80" text-anchor="middle">Firecracker microVM</text>
+<line x1="696" y1="180.0" x2="711" y2="180.0" stroke="#fff" stroke-width="2.5" stroke-dasharray="" marker-end="url(#ah)"/>
+<rect x="715" y="132.0" width="158" height="96" rx="10" fill="#FF8A3D" stroke="none" stroke-width="2.5" stroke-dasharray=""/>
+<text x="794.0" y="163.0" font-size="15" font-weight="700" fill="#fff" text-anchor="middle">Full Java init</text>
+<text x="794.0" y="183.0" font-size="12.5" fill="#fff" text-anchor="middle">JVM start, class load,</text>
+<text x="794.0" y="203.0" font-size="12.5" fill="#fff" text-anchor="middle">static init ≈ 3347 ms</text>
+<line x1="876" y1="180.0" x2="891" y2="180.0" stroke="#fff" stroke-width="2.5" stroke-dasharray="" marker-end="url(#ah)"/>
+<rect x="895" y="132.0" width="158" height="96" rx="10" fill="#fff" stroke="none" stroke-width="2.5" stroke-dasharray=""/>
+<text x="974.0" y="173.0" font-size="15" font-weight="700" fill="#002A80" text-anchor="middle">Handler runs</text>
+<text x="974.0" y="193.0" font-size="12.5" fill="#002A80" text-anchor="middle">Response returned</text>
+<rect x="30" y="302" width="1045" height="176" rx="14" fill="#144CC0"/>
+<text x="46" y="374" font-size="14" font-weight="700" fill="#fff">WITH</text><text x="46" y="393" font-size="14" font-weight="700" fill="#fff">SNAPSTART</text><text x="46" y="414" font-size="12.5" fill="#C9D8FF">every cold start</text>
+<rect x="175" y="342.0" width="158" height="96" rx="10" fill="#fff" stroke="none" stroke-width="2.5" stroke-dasharray=""/>
+<text x="254.0" y="373.0" font-size="15" font-weight="700" fill="#002A80" text-anchor="middle">Client request</text>
+<text x="254.0" y="393.0" font-size="12.5" fill="#002A80" text-anchor="middle">Console test event</text>
+<text x="254.0" y="413.0" font-size="12.5" fill="#002A80" text-anchor="middle">on Version 4</text>
+<line x1="336" y1="390.0" x2="351" y2="390.0" stroke="#fff" stroke-width="2.5" stroke-dasharray="" marker-end="url(#ah)"/>
+<rect x="355" y="342.0" width="158" height="96" rx="10" fill="#fff" stroke="none" stroke-width="2.5" stroke-dasharray=""/>
+<text x="434.0" y="383.0" font-size="15" font-weight="700" fill="#002A80" text-anchor="middle">Lambda service</text>
+<text x="434.0" y="403.0" font-size="12.5" fill="#002A80" text-anchor="middle">No warm environment</text>
+<line x1="516" y1="390.0" x2="531" y2="390.0" stroke="#fff" stroke-width="2.5" stroke-dasharray="" marker-end="url(#ah)"/>
+<rect x="535" y="342.0" width="158" height="96" rx="10" fill="#fff" stroke="none" stroke-width="2.5" stroke-dasharray=""/>
+<text x="614.0" y="383.0" font-size="15" font-weight="700" fill="#002A80" text-anchor="middle">New environment</text>
+<text x="614.0" y="403.0" font-size="12.5" fill="#002A80" text-anchor="middle">Firecracker microVM</text>
+<line x1="696" y1="390.0" x2="711" y2="390.0" stroke="#fff" stroke-width="2.5" stroke-dasharray="" marker-end="url(#ah)"/>
+<rect x="715" y="342.0" width="158" height="96" rx="10" fill="#2EC46B" stroke="none" stroke-width="2.5" stroke-dasharray=""/>
+<text x="794.0" y="373.0" font-size="15" font-weight="700" fill="#fff" text-anchor="middle">Restore snapshot</text>
+<text x="794.0" y="393.0" font-size="12.5" fill="#fff" text-anchor="middle">Initialized JVM resumed</text>
+<text x="794.0" y="413.0" font-size="12.5" fill="#fff" text-anchor="middle">≈ 549 ms</text>
+<line x1="876" y1="390.0" x2="891" y2="390.0" stroke="#fff" stroke-width="2.5" stroke-dasharray="" marker-end="url(#ah)"/>
+<rect x="895" y="342.0" width="158" height="96" rx="10" fill="#fff" stroke="none" stroke-width="2.5" stroke-dasharray=""/>
+<text x="974.0" y="383.0" font-size="15" font-weight="700" fill="#002A80" text-anchor="middle">Handler runs</text>
+<text x="974.0" y="403.0" font-size="12.5" fill="#002A80" text-anchor="middle">Response returned</text>
+<rect x="30" y="512" width="1045" height="176" rx="14" fill="#144CC0"/>
+<text x="46" y="584" font-size="14" font-weight="700" fill="#fff">BUILD &amp;</text><text x="46" y="603" font-size="14" font-weight="700" fill="#fff">PUBLISH</text><text x="46" y="624" font-size="12.5" fill="#C9D8FF">one time per version</text>
+<rect x="175" y="552.0" width="158" height="96" rx="10" fill="#fff" stroke="none" stroke-width="2.5" stroke-dasharray=""/>
+<text x="254.0" y="583.0" font-size="15" font-weight="700" fill="#002A80" text-anchor="middle">Java 21 code</text>
+<text x="254.0" y="603.0" font-size="12.5" fill="#002A80" text-anchor="middle">example.LambdaHandler</text>
+<text x="254.0" y="623.0" font-size="12.5" fill="#002A80" text-anchor="middle">slow static init</text>
+<line x1="336" y1="600.0" x2="351" y2="600.0" stroke="#fff" stroke-width="2.5" stroke-dasharray="" marker-end="url(#ah)"/>
+<rect x="355" y="552.0" width="158" height="96" rx="10" fill="#fff" stroke="none" stroke-width="2.5" stroke-dasharray=""/>
+<text x="434.0" y="583.0" font-size="15" font-weight="700" fill="#002A80" text-anchor="middle">Maven build</text>
+<text x="434.0" y="603.0" font-size="12.5" fill="#002A80" text-anchor="middle">mvn clean package</text>
+<text x="434.0" y="623.0" font-size="12.5" fill="#002A80" text-anchor="middle">Lambda JAR</text>
+<line x1="516" y1="600.0" x2="531" y2="600.0" stroke="#fff" stroke-width="2.5" stroke-dasharray="" marker-end="url(#ah)"/>
+<rect x="535" y="552.0" width="158" height="96" rx="10" fill="#fff" stroke="none" stroke-width="2.5" stroke-dasharray=""/>
+<text x="614.0" y="583.0" font-size="15" font-weight="700" fill="#002A80" text-anchor="middle">Deploy + publish</text>
+<text x="614.0" y="603.0" font-size="12.5" fill="#002A80" text-anchor="middle">SnapStart =</text>
+<text x="614.0" y="623.0" font-size="12.5" fill="#002A80" text-anchor="middle">PublishedVersions</text>
+<line x1="696" y1="600.0" x2="711" y2="600.0" stroke="#fff" stroke-width="2.5" stroke-dasharray="" marker-end="url(#ah)"/>
+<rect x="715" y="552.0" width="158" height="96" rx="10" fill="#fff" stroke="#2EC46B" stroke-width="2.5" stroke-dasharray=""/>
+<text x="794.0" y="583.0" font-size="15" font-weight="700" fill="#002A80" text-anchor="middle">Init once → snapshot</text>
+<text x="794.0" y="603.0" font-size="12.5" fill="#002A80" text-anchor="middle">Encrypted and</text>
+<text x="794.0" y="623.0" font-size="12.5" fill="#002A80" text-anchor="middle">cached by Lambda</text>
+<rect x="895" y="552.0" width="158" height="96" rx="10" fill="none" stroke="#fff" stroke-width="2.5" stroke-dasharray="6 5"/>
+<text x="974.0" y="583.0" font-size="15" font-weight="700" fill="#fff" text-anchor="middle">IAM execution role</text>
+<text x="974.0" y="603.0" font-size="12.5" fill="#fff" text-anchor="middle">Lets the function</text>
+<text x="974.0" y="623.0" font-size="12.5" fill="#fff" text-anchor="middle">write logs</text>
+<line x1="794.0" y1="549.0" x2="794.0" y2="444.0" stroke="#2EC46B" stroke-width="2.5" stroke-dasharray="7 5" marker-end="url(#ahg)"/>
+<text x="804.0" y="505" font-size="13" font-weight="700" fill="#fff">snapshot reused</text>
+<rect x="1095" y="92" width="160" height="386" rx="12" fill="#fff"/>
+<text x="1175.0" y="158" font-size="16" font-weight="700" fill="#002A80" text-anchor="middle">Amazon</text>
+<text x="1175.0" y="179" font-size="16" font-weight="700" fill="#002A80" text-anchor="middle">CloudWatch Logs</text>
+<text x="1175.0" y="200" font-size="8" font-weight="400" fill="#002A80" text-anchor="middle"></text>
+<text x="1175.0" y="221" font-size="13" font-weight="400" fill="#002A80" text-anchor="middle">REPORT line per</text>
+<text x="1175.0" y="242" font-size="13" font-weight="400" fill="#002A80" text-anchor="middle">invocation</text>
+<text x="1175.0" y="263" font-size="14" font-weight="400" fill="#002A80" text-anchor="middle"></text>
+<text x="1175.0" y="284" font-size="14" font-weight="700" fill="#FF8A3D" text-anchor="middle">Without</text>
+<text x="1175.0" y="305" font-size="13" font-weight="400" fill="#002A80" text-anchor="middle">Init Duration</text>
+<text x="1175.0" y="326" font-size="15" font-weight="700" fill="#002A80" text-anchor="middle">3347.04 ms</text>
+<text x="1175.0" y="347" font-size="10" font-weight="400" fill="#002A80" text-anchor="middle"></text>
+<text x="1175.0" y="368" font-size="14" font-weight="700" fill="#2EC46B" text-anchor="middle">With</text>
+<text x="1175.0" y="389" font-size="13" font-weight="400" fill="#002A80" text-anchor="middle">Restore Duration</text>
+<text x="1175.0" y="410" font-size="15" font-weight="700" fill="#002A80" text-anchor="middle">549.09 ms</text>
+<line x1="1056" y1="180.0" x2="1091" y2="180.0" stroke="#fff" stroke-width="2.5" stroke-dasharray="" marker-end="url(#ah)"/>
+<line x1="1056" y1="390.0" x2="1091" y2="390.0" stroke="#fff" stroke-width="2.5" stroke-dasharray="" marker-end="url(#ah)"/>
+<rect x="1098" y="548" width="22" height="22" rx="5" fill="#FF8A3D"/>
+<text x="1130" y="564" font-size="13.5" fill="#fff">Slow path: full init</text>
+<rect x="1098" y="588" width="22" height="22" rx="5" fill="#2EC46B"/>
+<text x="1130" y="604" font-size="13.5" fill="#fff">SnapStart path</text>
+<rect x="1098" y="628" width="22" height="22" rx="5" fill="none" stroke="#fff" stroke-width="2" stroke-dasharray="4 3"/>
+<text x="1130" y="644" font-size="13.5" fill="#fff">Supporting resource</text>
+</g></svg>

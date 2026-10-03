@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="330" viewBox="0 0 1280 330" role="img" aria-label="Cold start comparison: Init Duration 3347.04 ms without SnapStart versus Restore Duration 549.09 ms with SnapStart">
+<g font-family="'Segoe UI', Helvetica, Arial, sans-serif">
+  <rect width="1280" height="330" rx="16" fill="#F4F7FD" stroke="#D5DEEF"/>
+  <text x="40" y="44" font-size="22" font-weight="700" fill="#0b1f4d">Cold-start time, measured in CloudWatch (drawn to scale)</text>
+  
+  <text x="40" y="106" font-size="21" font-weight="600" fill="#0b1f4d">Without SnapStart</text>
+  <text x="40" y="130" font-size="16" fill="#51607a">$LATEST · full Java init</text>
+  <rect x="250" y="76" width="836.8" height="64" rx="8" fill="#FF8A3D"/>
+  <text x="668.4" y="115" font-size="19" font-weight="600" fill="#ffffff" text-anchor="middle">Init Duration  3347.04 ms</text>
+  <rect x="1089.8" y="76" width="6" height="64" rx="3" fill="#0038A8"/>
+  <text x="1104.8" y="104" font-size="15" fill="#51607a">+ handler</text>
+  <text x="1104.8" y="124" font-size="15" fill="#51607a">10.49 ms</text>
+  
+  <text x="40" y="200" font-size="21" font-weight="600" fill="#0b1f4d">With SnapStart</text>
+  <text x="40" y="224" font-size="16" fill="#51607a">Version 4 · snapshot restore</text>
+  <rect x="250" y="170" width="137.3" height="64" rx="8" fill="#2EC46B"/>
+  <text x="318.6" y="209" font-size="19" font-weight="600" fill="#ffffff" text-anchor="middle">Restore  549.09 ms</text>
+  <rect x="390.3" y="170" width="6" height="64" rx="3" fill="#0038A8"/>
+  <text x="405.3" y="198" font-size="15" fill="#51607a">+ handler</text>
+  <text x="405.3" y="218" font-size="15" fill="#51607a">48.39 ms</text>
+  <rect x="487.3" y="170" width="599.5" height="64" rx="8" fill="none" stroke="#0038A8" stroke-width="2" stroke-dasharray="7 6"/>
+  <text x="787.0" y="209" font-size="19" font-weight="600" fill="#0038A8" text-anchor="middle">2797.95 ms saved  (83.6% less)</text>
+  <line x1="250" y1="262" x2="1125.0" y2="262" stroke="#8a97ad"/>
+  <line x1="250.0" y1="262" x2="250.0" y2="272" stroke="#8a97ad"/><text x="250.0" y="292" font-size="15" fill="#51607a" text-anchor="middle">0 s</text><line x1="500.0" y1="262" x2="500.0" y2="272" stroke="#8a97ad"/><text x="500.0" y="292" font-size="15" fill="#51607a" text-anchor="middle">1 s</text><line x1="750.0" y1="262" x2="750.0" y2="272" stroke="#8a97ad"/><text x="750.0" y="292" font-size="15" fill="#51607a" text-anchor="middle">2 s</text><line x1="1000.0" y1="262" x2="1000.0" y2="272" stroke="#8a97ad"/><text x="1000.0" y="292" font-size="15" fill="#51607a" text-anchor="middle">3 s</text>
+  <text x="40" y="314" font-size="15" fill="#51607a">Memory 512 MB · x86_64 · ap-south-1 · same code and settings, the only change is SnapStart</text>
+</g></svg>
